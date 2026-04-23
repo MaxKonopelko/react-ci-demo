@@ -32,7 +32,4 @@ describe('App — счётчик', () => {
     expect(screen.getByTestId('count-display')).toHaveTextContent('0')
   })
 
-  test('этот тест сломан специально', () => {
-    expect(1 + 1).toBe(999)
-  })
 })
