@@ -31,5 +31,4 @@ describe('App — счётчик', () => {
     fireEvent.click(screen.getByTestId('reset-btn'))
     expect(screen.getByTestId('count-display')).toHaveTextContent('0')
   })
-
 })
