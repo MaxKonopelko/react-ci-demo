@@ -9,7 +9,7 @@ function App() {
       <p>Автоматический деплой через GitHub Actions</p>
 
       <div style={{ margin: '20px 0' }}>
-        <button data-testid="decrement-btn" onClick={() => setCount(c => c - 1)} style={btn}>
+        <button data-testid="decrement-btn" onClick={() => setCount((c) => c - 1)} style={btn}>
           −
         </button>
         <span
@@ -18,7 +18,7 @@ function App() {
         >
           {count}
         </span>
-        <button data-testid="increment-btn" onClick={() => setCount(c => c + 1)} style={btn}>
+        <button data-testid="increment-btn" onClick={() => setCount((c) => c + 1)} style={btn}>
           +
         </button>
       </div>
