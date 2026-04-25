@@ -230,21 +230,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # Нужен полный history для анализа коммитов
           fetch-depth: 0
-          # Используем наш токен вместо стандартного GITHUB_TOKEN
           persist-credentials: false
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'  # ← было '20', меняем на '22'
           cache: 'npm'
 
       - run: npm ci
 
-      # Запустить semantic-release
       - name: Создать релиз
         env:
-          # Токен для создания релизов и коммитов
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
         run: npx semantic-release
